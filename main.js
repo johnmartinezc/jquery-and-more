@@ -3,13 +3,11 @@ let page = $('body')
 page.append(myDiv)
 let newInput = $('#name')
 
-let newUl = $('<ul></ul>')
-page.append(newUl)
 
 
 myDiv.on('click',(event)=>{
     event.preventDefault()
-    let li = $('<ul>' + newInput.val() + '</ul>')
-    newUl.append(li)
+    let ul = $('<ul>' + newInput.val() + '</ul>')
+    myDiv.append(ul)
     newInput.val('')
 })
